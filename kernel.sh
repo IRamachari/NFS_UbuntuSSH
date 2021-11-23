@@ -1,3 +1,5 @@
-git clone https://AnGgIt88:$GH_TOKEN@github.com/AnGgIt88/Finix_kernel-4.9-rosy -b 11 && cd Finix_kernel-4.9-rosy
 git config --global user.email jarbull87@gmail.com
 git config --global user.name AnGgIt88
+git clone https://AnGgIt88:$GH_TOKEN@github.com/AnGgIt88/kernel_xiaomi_rosy -b eleven && cd kernel_xiaomi_rosy
+git fetch https://github.com/AnGgIt88/Finix_kernel-4.9-rosy 11
+echo done..
