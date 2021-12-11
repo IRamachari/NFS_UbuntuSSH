@@ -1,6 +1,10 @@
 name: UbuntuSSH
 on: 
   workflow_dispatch:
+  pull_request:
+  push:
+  schedule:
+    - cron: '0 0 * * 0,4'
 defaults:
   run:
     shell: bash
