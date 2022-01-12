@@ -12,6 +12,7 @@ jobs:
       with:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
+        timeout-minutes: 480
     - uses: actions/checkout@v2
     - name: Session Setup
       uses: mxschmitt/action-tmate@master
