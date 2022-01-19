@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 480
     container:
-      image:anggit86/docker:latest
+      image: anggit86/docker:latest
     steps: 
     - uses: fastai/workflows/ssh@master
       with:
