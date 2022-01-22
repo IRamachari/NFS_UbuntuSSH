@@ -6,10 +6,8 @@ defaults:
     shell: bash
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-21.10
     timeout-minutes: 480
-    container:
-      image: anggit86/docker:latest
     steps: 
     - uses: fastai/workflows/ssh@master
       with:
