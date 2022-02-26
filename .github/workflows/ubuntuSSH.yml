@@ -14,16 +14,5 @@ jobs:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
     - uses: actions/checkout@v2
-    - name: add gpg key..
-      run: |
-        gpg --import nfsgpg.key
-        git config --global commit.gpgsign true
-        git config --global user.signingkey $GPG_KEY
-        git config --global gpg.program gpg2
-        export GPG_TTY=$(tty)
-        echo "test" | gpg2 --clearsign
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        GPG_KEY: ${{ secrets.GPG_KEY }}
     - name: Session Setup
       uses: mxschmitt/action-tmate@master
