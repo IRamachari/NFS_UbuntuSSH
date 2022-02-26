@@ -11,6 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
     - uses: actions/checkout@v2
+    - name: add gpg key..
+      run: |
+        gpg --import nfsgpg.key
+        git config --global commit.gpgsign true
+        git config --global user.signingkey $GPG_KEY
+        git config --global gpg.program gpg2
+        export GPG_TTY=$(tty)
+        echo "test" | gpg2 --clearsign
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        GPG_KEY: ${{ secrets.GPG_KEY }}
     - name: Update platform system sepolicy OctaviOS 12..
       run: |
         git config --global user.email jarbull86@gmail.com
