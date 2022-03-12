@@ -15,4 +15,4 @@ jobs:
         key_file: id_rsa
     - uses: actions/checkout@v3
     - name: Session Setup
-      uses: mxschmitt/action-tmate@master
+      uses: mxschmitt/action-tmate@v3
