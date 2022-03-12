@@ -7,12 +7,8 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    timeout-minutes: 480
     steps: 
     - uses: fastai/workflows/ssh@master
-      with:
-        ssh_key: ${{ secrets.SSH_KEY }}
-        key_file: id_ecdsa
     - uses: actions/checkout@v3
     - name: Session Setup
       uses: mxschmitt/action-tmate@v3
