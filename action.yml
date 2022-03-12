@@ -23,10 +23,10 @@ inputs:
     description: 'the allowed cipher algorithms. If unspecified then a sensible'
   timeout:
     description: 'timeout for ssh to host'
-    default: "30s"
+    default: "480m"
   command_timeout:
     description: 'timeout for ssh command'
-    default: "10m"
+    default: "480m"
   key:
     description: 'content of ssh private key. ex raw content of ~/.ssh/id_rsa'
   key_path:
@@ -46,7 +46,7 @@ inputs:
     description: 'ssh proxy key passphrase'
   proxy_timeout:
     description: 'timeout for ssh to proxy host'
-    default: "30s"
+    default: "480m"
   proxy_key:
     description: 'content of ssh proxy private key. ex raw content of ~/.ssh/id_rsa'
   proxy_key_path:
