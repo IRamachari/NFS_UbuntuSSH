@@ -24,7 +24,7 @@ jobs:
       uses: fastai/workflows/ssh@master
       with:
         ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        key_file: github.action
+        key_file: frs.sourceforge.net
 
     - name: Download..
       run: |
@@ -32,4 +32,4 @@ jobs:
 
     - name: Upload..
       run: |
-        sshpass -p ${SF_PASSWORD} scp -o StrictHostKeyChecking=no *.zip ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
+        sshpass -p ${SF_PASSWORD} scp *.zip ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
