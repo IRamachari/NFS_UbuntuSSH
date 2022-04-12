@@ -1,4 +1,4 @@
-name: Upload
+name: Upload to sourceforge
 on: 
   push:
 
@@ -11,10 +11,10 @@ env:
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
   LINK: https://rombuilder.projek.workers.dev/Spark-Rom/rosy/Spark-12.2-UNOFFICIAL-rosy-20220411.zip
   FILE_NAME: Spark-12.2-UNOFFICIAL-rosy-20220411.zip
-  UPLOAD: sparkos-rosy/12
+  UPLOAD: ccache
 
 jobs:
-  Dwploy:
+  Deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Clone repo & checkout code
@@ -30,6 +30,6 @@ jobs:
       run: |
         wget ${LINK}
 
-    - name: Download..
+    - name: Upload..
       run: |
         sshpass -p ${SF_PASSWORD} scp -o StrictHostKeyChecking=no *.zip ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
