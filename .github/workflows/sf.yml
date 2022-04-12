@@ -1,0 +1,35 @@
+name: Upload
+on: 
+  push:
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  SF_USERNAME: ${{ secrets.SF_USER }}
+  SF_PASSWORD: ${{ secrets.SF_PASWORD }}
+  LINK: https://rombuilder.projek.workers.dev/Spark-Rom/rosy/Spark-12.2-UNOFFICIAL-rosy-20220411.zip
+  FILE_NAME: Spark-12.2-UNOFFICIAL-rosy-20220411.zip
+  UPLOAD: sparkos-rosy/12
+
+jobs:
+  Dwploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repo & checkout code
+      uses: actions/checkout@v2
+
+    - name: SSH agent
+      uses: fastai/workflows/ssh@master
+      with:
+        ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        key_file: github.action
+
+    - name: Download..
+      run: |
+        wget ${LINK}
+
+    - name: Download..
+      run: |
+        sshpass -p ${SF_PASSWORD} scp -o StrictHostKeyChecking=no *.zip ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
