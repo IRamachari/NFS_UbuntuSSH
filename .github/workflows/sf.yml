@@ -9,9 +9,9 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://rombuilder.projek.workers.dev/Spark-Rom/rosy/Spark-12.2-UNOFFICIAL-rosy-20220411.zip
-  FILE_NAME: Spark-12.2-UNOFFICIAL-rosy-20220411.zip
-  UPLOAD: ccache
+  LINK: https://rombuilder.projek.workers.dev/Bootleggers-BrokenLab/rosy/BootleggersROM-Sambunimbo4rosy.6.8-Alpha-Testing-20220414-001132.zip
+  FILE_NAME: BootleggersROM-Sambunimbo4rosy.6.8-Alpha-Testing-20220414-001132.zip
+  UPLOAD: bootleggers-rosy/12
 
 jobs:
   Deploy:
@@ -32,4 +32,4 @@ jobs:
 
     - name: Upload..
       run: |
-        sshpass -p ${SF_PASSWORD} scp *.zip ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
+        sshpass -p ${SF_PASSWORD} scp ${FILE_NAME} ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
