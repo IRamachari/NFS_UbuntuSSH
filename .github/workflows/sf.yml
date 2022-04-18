@@ -9,9 +9,9 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://rombuilder.projek.workers.dev/Bootleggers-BrokenLab/rosy/BootleggersROM-Sambunimbo4rosy.6.8-Alpha-Testing-20220414-001132.zip
-  FILE_NAME: BootleggersROM-Sambunimbo4rosy.6.8-Alpha-Testing-20220414-001132.zip
-  UPLOAD: bootleggers-rosy/12
+  LINK: https://nfsproject.projek.workers.dev/0:/ProjectBlaze/rosy/Blaze-v1.0-rosy-20220418-0610-VANILLA-UNOFFICIAL.zip
+  FILE_NAME: Blaze-v1.0-rosy-20220418-0610-VANILLA-UNOFFICIAL.zip
+  UPLOAD: projectblaze-rosy/12
 
 jobs:
   Deploy:
