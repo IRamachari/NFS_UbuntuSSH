@@ -9,9 +9,9 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/ProjectBlaze/rosy/Blaze-v1.0-rosy-20220418-0610-VANILLA-UNOFFICIAL.zip
-  FILE_NAME: Blaze-v1.0-rosy-20220418-0610-VANILLA-UNOFFICIAL.zip
-  UPLOAD: projectblaze-rosy/12
+  LINK: https://nfsproject.projek.workers.dev/0:/Project-Awaken/rosy/Awaken-2.6-Eclipse-rosy-UNOFFICIAL-Vanilla-0130-20220429.zip
+  FILE_NAME: Awaken-2.6-Eclipse-rosy-UNOFFICIAL-Vanilla-0130-20220429.zip
+  UPLOAD: awakenos/12
 
 jobs:
   Deploy:
