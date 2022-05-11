@@ -9,9 +9,9 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/projectarcana-aosp/rosy/ProjectArcana-GALE-FNL-rosy-COMMUNITY-VANILLA-20220510-0007.zip
-  FILE_NAME: ProjectArcana-GALE-FNL-rosy-COMMUNITY-VANILLA-20220510-0007.zip
-  UPLOAD: arcaneos/12
+  LINK: https://nfsproject.projek.workers.dev/0:/VoltageOS/rosy/voltage-1.5-rosy-20220511-1354-UNOFFICIAL.zip
+  FILE_NAME: voltage-1.5-rosy-20220511-1354-UNOFFICIAL.zip
+  UPLOAD: voltageos/12
 
 jobs:
   Deploy:
