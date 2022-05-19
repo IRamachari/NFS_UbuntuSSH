@@ -27,9 +27,9 @@ jobs:
     - name: Download
       uses: Difegue/action-megacmd@master
       with:
-        args: get ${LINK} $HOME
+        args: get ${LINK} ~/home/runner/work/UbuntuSSH/UbuntuSSH
 
     - name: Upload..
       run: |
         echo next..
-        cd /github/home && ls -al
+        cd ~/home/runner/work/UbuntuSSH/UbuntuSSH && ls -al
