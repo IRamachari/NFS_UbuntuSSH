@@ -25,9 +25,9 @@ jobs:
         key_file: frs.sourceforge.net
 
     - name: Download
-        uses: Difegue/action-megacmd@master
-        with:
-          args: get ${LINK} $HOME
+      uses: Difegue/action-megacmd@master
+      with:
+        args: get ${LINK} $HOME
 
     - name: Upload..
       run: |
