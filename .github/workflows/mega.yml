@@ -1,0 +1,38 @@
+name: Mega Downloader
+on: 
+  push:
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  LINK: https://mega.nz/file/fxtkgJ4C#PSWHWFcjdOtNFDkKcNYZUaQ-0Ffep6FNXwFmb0p_E74
+  FILE_NAME: 
+  UPLOAD: 
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone repo & checkout code
+      uses: actions/checkout@v2
+
+    - name: SSH agent
+      uses: fastai/workflows/ssh@master
+      with:
+        ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        key_file: frs.sourceforge.net
+
+    - name: Install Dependency..
+      run: |
+        sudo apt-get -y update && sudo apt-get -y upgrade
+        sudo apt-get -y install python libtool libglib2.0-dev gobject-introspection libgmp3-dev nettle-dev asciidoc glib-networking openssl libcurl4-openssl-dev libssl-dev megatools
+
+    - name: Download..
+      run: |
+        megadl `${LINK}`
+
+    - name: Upload..
+      run: |
+        echo next..
