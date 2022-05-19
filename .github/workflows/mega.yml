@@ -32,4 +32,4 @@ jobs:
     - name: Upload..
       run: |
         echo next..
-        cd ~/github/home && ls -al
+        cd /github/home && ls -al
