@@ -1,6 +1,6 @@
 name: Upload to sourceforge
 on: 
-  push:
+  workflow_dispatch:
 
 defaults:
   run:
