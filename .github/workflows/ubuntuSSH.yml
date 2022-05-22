@@ -1,6 +1,7 @@
 name: UbuntuSSH
 on: 
   workflow_dispatch:
+  push:
 defaults:
   run:
     shell: bash
@@ -14,6 +15,9 @@ jobs:
       with:
         ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
         key_file: github.action
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Session Setup
       uses: mxschmitt/action-tmate@v3
+      timeout-minutes: 120
+      with:
+        sudo: false
