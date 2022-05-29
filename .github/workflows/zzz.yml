@@ -25,3 +25,7 @@ jobs:
           cd mirrorbot
           sudo docker build . -t mirrorbot
           sudo docker run -p 80:80 mirrorbot
+      - name: Run Bot..
+        run: |
+          cd mirrorbot
+          sudo docker run -p 80:80 mirrorbot
