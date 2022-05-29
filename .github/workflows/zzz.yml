@@ -1,0 +1,12 @@
+name: mirrorbot deploy
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  deploy:
+    name: bot mirror
+    runs-on: ubuntu-latest
+    steps:
+      - uses: NFS86/mirrorbot@master
