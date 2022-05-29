@@ -24,7 +24,6 @@ jobs:
           git clone https://NFS86:$GH_TOKEN@github.com/NFS86/mirrorbot
           cd mirrorbot
           sudo docker build . -t mirrorbot
-          sudo docker run -p 80:80 mirrorbot
       - name: Run Bot..
         run: |
           cd mirrorbot
