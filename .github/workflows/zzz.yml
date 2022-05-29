@@ -16,13 +16,11 @@ jobs:
     name: bot mirror
     runs-on: ubuntu-latest
     steps:
-      - uses: fastai/workflows/ssh@master
-        with:
-          ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          key_file: github.action
       - uses: actions/checkout@v2
       - name: Build Bot..
         run: |
-          git clone https://NFS86:${GH_TOKEN}@github.com/NFS86/mirrorbot
+          git config --global user.email jarbull86@gmail.com
+          git config --global user.name NFS86
+          git clone https://NFS86:$GH_TOKEN@github.com/NFS86/mirrorbot
           sudo docker build . -t mirrorbot
           sudo docker run -p 80:80 mirrorbot
