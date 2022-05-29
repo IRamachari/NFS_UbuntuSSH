@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
   push:
 
+defaults:
+  run:
+    shell: bash
+
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -12,6 +16,10 @@ jobs:
     name: bot mirror
     runs-on: ubuntu-latest
     steps:
+      - uses: fastai/workflows/ssh@master
+        with:
+          ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key_file: github.action
       - uses: actions/checkout@v2
       - name: Build Bot..
         run: |
