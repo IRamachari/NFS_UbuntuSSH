@@ -4,9 +4,17 @@ on:
   workflow_dispatch:
   push:
 
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
 jobs:
   deploy:
     name: bot mirror
     runs-on: ubuntu-latest
     steps:
-      - uses: NFS86/mirrorbot@master
+      - uses: actions/checkout@v2
+      - name: Build Bot..
+        run: |
+          git clone https://NFS86:${GH_TOKEN}@github.com/NFS86/mirrorbot
+          sudo docker build . -t mirrorbot
+          sudo docker run -p 80:80 mirrorbot
