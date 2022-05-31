@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
 
+  schedule:
+    - cron: '0 00-00 * 1-12 1-7'
+
 defaults:
   run:
     shell: bash
