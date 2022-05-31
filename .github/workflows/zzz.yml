@@ -18,7 +18,6 @@ jobs:
   deploy:
     name: bot mirror
     runs-on: ubuntu-latest
-    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v2
       - name: Build Bot..
