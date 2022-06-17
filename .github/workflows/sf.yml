@@ -10,7 +10,6 @@ env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
   LINK: https://roms.cirrus-ci.workers.dev/0:/rosy/AospExtended-v9.1-rosy-UNOFFICIAL-NFS-Projects-20220617-2129.zip
-  FILE_NAME: *.zip
   UPLOAD: aospextended-rosy/12
 
 jobs:
@@ -32,4 +31,4 @@ jobs:
 
     - name: Upload..
       run: |
-        sshpass -p ${SF_PASSWORD} scp ${FILE_NAME} ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
+        sshpass -p ${SF_PASSWORD} scp *.zip ${SF_USERNAME}@frs.sourceforge.net:/home/frs/project/${UPLOAD}
