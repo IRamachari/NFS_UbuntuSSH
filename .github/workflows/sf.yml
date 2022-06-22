@@ -9,8 +9,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://roms.cirrus-ci.workers.dev/0:/rosy/AospExtended-v9.1-rosy-UNOFFICIAL-NFS-Projects-20220617-2129.zip
-  UPLOAD: aospextended-rosy/12
+  LINK: https://nfsproject.projek.workers.dev/0:/AICP/rosy/aicp_rosy_r-16.1-UNOFFICIAL-20220622.zip
+  UPLOAD: aicp/11
 
 jobs:
   Deploy:
