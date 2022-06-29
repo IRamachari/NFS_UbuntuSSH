@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Session Setup
       uses: mxschmitt/action-tmate@v3
-      timeout-minutes: 240
+      timeout-minutes: 300
       with:
         sudo: true
