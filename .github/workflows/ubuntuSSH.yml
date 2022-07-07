@@ -18,3 +18,6 @@ jobs:
       timeout-minutes: 300
       with:
         sudo: true
+        install-dependencies: false
+        tmate-server-host: medusa
+        tmate-server-port: 22
