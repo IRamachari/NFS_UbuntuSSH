@@ -9,8 +9,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://roms.cirrus-ci.workers.dev/0:/rosy/crDroidAndroid-12.1-20220711-rosy-v8.6.zip
-  UPLOAD: crdroid-rosy/12/
+  LINK: https://roms.cirrus-ci.workers.dev/0:/rosy/crDroidAndroid-12.1-20220722-rosy-v8.7.zip
+  UPLOAD: crdroid-rosy/12
 
 jobs:
   Deploy:
