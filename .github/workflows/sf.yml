@@ -9,7 +9,7 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://roms.cirrus-ci.workers.dev/0:/rosy/riceDroid-12.1-2022080502-rosy-v4.0-PIXEL.zip
+  LINK: https://nfsproject.projek.workers.dev/0:/RiceDroid/rosy/riceDroid-12.1-2022080917-rosy-v4.5-PIXEL.zip
   UPLOAD: ricedroid-rosy/12
 
 jobs:
