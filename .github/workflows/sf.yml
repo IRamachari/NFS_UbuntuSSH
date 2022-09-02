@@ -9,8 +9,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/RiceDroid/rosy/riceDroid-12.1-2022081815-rosy-v5.0-VANILLA.zip
-  UPLOAD: ricedroid-rosy/12
+  LINK: https://nfsproject.projek.workers.dev/0:/ArrowOS/rosy/Arrow-v12.1-rosy-UNOFFICIAL-20220902-VANILLA.zip
+  UPLOAD: arrowos/12
 
 jobs:
   Deploy:
