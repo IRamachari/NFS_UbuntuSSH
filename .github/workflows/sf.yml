@@ -1,6 +1,7 @@
 name: Upload to sourceforge
 on: 
   workflow_dispatch:
+  push:
 
 defaults:
   run:
@@ -9,8 +10,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/ArrowOS/rosy/Arrow-v12.1-rosy-UNOFFICIAL-20220902-VANILLA.zip
-  UPLOAD: arrowos/12
+  LINK: nfsproject.projek.workers.dev/0:/Project-Elixir/rosy/ProjectElixir_2.0_rosy-12.1-20220903-0859-UNOFFICIAL.zip
+  UPLOAD: projectelixir-rosy/12
 
 jobs:
   Deploy:
