@@ -10,8 +10,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: nfsproject.projek.workers.dev/0:/Project-Elixir/rosy/ProjectElixir_2.0_rosy-12.1-20220903-0859-UNOFFICIAL.zip
-  UPLOAD: projectelixir-rosy/12
+  LINK: https://nfsproject.projek.workers.dev/0:/ArrowOS/rosy/Arrow-v13.0-rosy-BETA-20220909-VANILLA.zip
+  UPLOAD: arrowos/13
 
 jobs:
   Deploy:
