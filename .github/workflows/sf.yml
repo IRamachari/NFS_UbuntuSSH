@@ -10,7 +10,7 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/ArrowOS/rosy/Arrow-v13.0-rosy-BETA-20220909-VANILLA.zip
+  LINK: https://nfsproject.projek.workers.dev/0:/ArrowOS/rosy/Arrow-v13.0-rosy-BETA-20220910-VANILLA.zip
   UPLOAD: arrowos/13
 
 jobs:
