@@ -16,7 +16,7 @@ jobs:
         key_file: github.action
     - uses: actions/checkout@v2
     - name: Session Setup
-      uses: mxschmitt/action-tmate@v3.11
+      uses: mxschmitt/action-tmate@v3
       timeout-minutes: 300
       with:
-        sudo: false
+        sudo: true
