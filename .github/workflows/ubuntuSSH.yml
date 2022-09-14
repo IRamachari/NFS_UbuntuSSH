@@ -10,10 +10,12 @@ jobs:
     container:
       image: anggit86/docker:cirrus
     steps:
-    - uses: fastai/workflows/ssh@master
+    - uses: shimataro/ssh-key-action@v2
       with:
-        ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        key_file: github.action
+        key: ${{ secrets.ANU_KEY }}
+        name: id_rsa
+        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        if_key_exists: ignore
     - uses: actions/checkout@v2
     - name: Session Setup
       uses: mxschmitt/action-tmate@v3
