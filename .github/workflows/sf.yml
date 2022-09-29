@@ -10,8 +10,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/xdroid-oss/rosy/INA.XD.13.0.r5-031609-rosy.REL.zip
-  UPLOAD: xdroid-rosy/13
+  LINK: https://nfsproject.projek.workers.dev/0:/Evolution-X/rosy/evolution_rosy-ota-tp1a.220905.004.a2-09291008-unofficial-unsigned.zip
+  UPLOAD: evolution-x-rosy/13
 
 jobs:
   Deploy:
