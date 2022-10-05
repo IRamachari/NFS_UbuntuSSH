@@ -10,8 +10,8 @@ defaults:
 env:
   SF_USERNAME: ${{ secrets.SF_USER }}
   SF_PASSWORD: ${{ secrets.SF_PASWORD }}
-  LINK: https://nfsproject.projek.workers.dev/0:/Evolution-X/rosy/evolution_rosy-ota-tp1a.220905.004.a2-10031805-unofficial-unsigned.zip
-  UPLOAD: evolution-x-rosy/13
+  LINK: https://nfsproject.projek.workers.dev/0:/DerpFest-AOSP/rosy/DerpFest-13-Community-Tango-rosy-20221005-0534.zip
+  UPLOAD: rosy-derpfest/13
 
 jobs:
   Deploy:
